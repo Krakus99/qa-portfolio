@@ -1,68 +1,104 @@
-Test Plan
-Title
+# Test Plan: Daily Missions Gold Progression (Sell / Undo System)
 
+## Title
 Validate Daily Missions gold progression consistency during Sell & Undo item actions
 
-Description
+## Description
+This test plan verifies that selling an item and immediately undoing the action does not incorrectly affect the Daily Missions gold progression. The system must correctly rollback both inventory state and progression tracking.
 
-This test plan verifies that selling an item and immediately undoing the action does not incorrectly affect the Daily Missions gold progression. The system must ensure proper state rollback in both frontend (UI) and backend (progression tracking).
+---
 
-Repository Context
-Project: Travel Town (or related game repo)
-Module: Economy / Daily Missions / Inventory System
-Area: Sell & Undo mechanics
-Objective
+## Repository Context
+- Project: Travel Town
+- Module: Economy / Daily Missions / Inventory System
+- Feature Area: Sell & Undo Mechanics
 
-Ensure that item sell and undo actions correctly maintain synchronization between:
+---
 
-Inventory state
-Gold progression tracking
-Daily Missions progression system
-Preconditions
-Player has access to inventory system
-Daily Missions system is active
-At least one item is available for creation and selling
-Game session is stable (no reconnect/state reset)
-Test Scenarios
-TC-01: Basic Sell & Undo Flow
-Record initial gold progression
-Sell an item
-Undo the sell action
-Verify gold progression matches initial state
-TC-02: State Consistency Check
-Validate item returns to inventory after undo
-Validate gold progression rollback is complete
-Compare UI value vs backend stored value (if accessible)
-TC-03: Repeated Exploit Attempt
-Repeat sell → undo cycle multiple times
-Check if progression accumulates incorrectly
-TC-04: Multi-item Handling
-Sell multiple items
-Undo last action
-Verify progression consistency
-TC-05: Stress Input Test
-Perform rapid sell/undo actions
-Check for desync or delayed rollback issues
-Expected Result
-Sell increases gold progression correctly
-Undo fully reverts:
-Inventory state
-Gold progression value
-No accumulation or duplication of progression values
-UI and backend remain synchronized
-Failure Criteria
-Gold progression increases after undo
-Item state restored but progression not reverted
-Mismatch between UI and backend values
-Exploitable progression gain via repeat actions
-Risk Assessment
-Economy system exploitation
-Progression inflation in Daily Missions
-Desync between client/server state
-Potential reward imbalance
-Notes
-This issue may indicate a missing rollback handler in economy transaction system
-Could be related to event-based progression tracking rather than state-based validation
-Tester
+## Objective
+Ensure correct synchronization between:
+- Inventory state
+- Gold progression system
+- Daily Missions progression tracking
 
+---
+
+## Preconditions
+- Player has access to inventory system
+- Daily Missions system is active
+- At least one item exists for testing
+- Stable game session
+
+---
+
+## Test Scenarios
+
+### TC-01: Basic Sell & Undo Flow
+1. Record initial gold progression
+2. Sell an item
+3. Undo sell action
+4. Verify gold progression returns to initial value
+
+---
+
+### TC-02: State Consistency Validation
+- Verify item returns to inventory after undo
+- Verify gold progression rollback is complete
+- Compare UI vs backend values (if accessible)
+
+---
+
+### TC-03: Repeated Exploit Test
+1. Repeat sell → undo cycle multiple times
+2. Observe progression values
+3. Check for unintended accumulation
+
+---
+
+### TC-04: Multi-Item Handling
+1. Sell multiple items
+2. Undo last action
+3. Verify progression consistency
+
+---
+
+### TC-05: Stress Input Test
+- Perform rapid sell/undo actions
+- Check for desync, delay, or incorrect updates
+
+---
+
+## Expected Result
+- Selling increases gold progression correctly
+- Undo fully reverts:
+  - Inventory state
+  - Gold progression value
+- No duplication or accumulation of progression
+- UI and backend remain synchronized
+
+---
+
+## Failure Criteria
+- Gold progression increases after undo
+- Inventory restored but progression not reverted
+- UI/backend mismatch
+- Exploitable progression gain via repeated actions
+
+---
+
+## Risk
+- Economy exploitation
+- Progression inflation
+- Client/server desynchronization
+- Reward imbalance in Daily Missions
+
+---
+
+## Notes
+- Possible missing rollback logic in economy transaction system
+- Likely event-based progression tracking issue
+
+---
+
+## Tester
 Emre Sedef
