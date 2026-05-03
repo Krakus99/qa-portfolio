@@ -27,17 +27,20 @@ Designed test cases for web/mobile applications
 Practiced black-box testing techniques
 
   Repository Structure
+  
 Bug Reports → Real examples of bugs I found
 Test Cases → Step-by-step test scenarios
 Test Plans → Basic testing strategies
 
   Skills
+  
 Manual Testing (Black-box)
 Bug Reporting
 Test Case Design
 Basic QA Documentation
   
   Goal
+  
 To improve my QA skills and grow into a professional QA Engineer role.
 
 Contact
