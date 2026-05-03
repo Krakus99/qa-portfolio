@@ -23,14 +23,17 @@ The horse should not be able to pass through or clip into fences under any movem
 Actual Result
 Horse clips through or partially enters the fence when moving diagonally
 Collision is not consistently enforced during diagonal movement
+
 Evidence
 
 https://drive.google.com/file/d/1dlid752w2UUE79lJrvMDp-JbQHTJBjOt/view?usp=sharing
 
 Bug Type
 Collision Bug
+
 Physics Bug
 Movement / Gameplay Bug
+
 Severity
 
 Medium — May allow unintended map traversal and breaks environmental integrity
