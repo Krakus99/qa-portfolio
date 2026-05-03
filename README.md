@@ -2,7 +2,7 @@
 Manual QA Testing Portfolio (Bug Reports &amp; Test Cases) -->
 
  
-# 🔴 **QA Testing Portfolio**
+# **QA Testing Portfolio**
 
 Hi, I’m an aspiring Manual QA Tester focused on black-box testing.
 
