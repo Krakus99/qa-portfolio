@@ -1,0 +1,43 @@
+### 1. Bug Report ID
+
+BR-002
+
+### 2. Bug Title
+
+Horse Pass Through Fences Bug – Stardew Valley
+
+### 3. Tested Game / Version
+
+Stardew Valley, Version 1.6.15
+
+### 4. Test Date
+
+June 27, 2025
+
+### 5. Tester
+
+Emre Sedef
+
+### 6. Preconditions
+
+- The horse must be mounted by the player.
+- The player must be near a fence with collision enabled.
+
+### 7. Steps to Reproduce
+
+1. Mount the horse.
+2. Approach a fence and ride alongside it vertically.
+3. While riding next to the fence, press forward and left (or right) keys simultaneously to move diagonally toward the fence.
+4. Observe that the horse clips through or passes inside the fence.
+
+### 8. Expected Result
+
+The horse should **not pass through or clip into the fence** when moving diagonally. Collision detection must prevent the horse from entering the fence boundary at all times.
+
+9. Actual Result
+
+When moving diagonally next to the fence, the horse **clips through and partially passes inside the fence**, allowing access to restricted areas.
+
+10. Priority / Severity
+
+Medium
