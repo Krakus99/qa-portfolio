@@ -2,7 +2,7 @@
 Manual QA Testing Portfolio (Bug Reports &amp; Test Cases) -->
 
  
-<span style="color:red; font-weight:bold; font-size:22px;">QA Testing Portfolio</span>
+# 🔴 **QA Testing Portfolio**
 
 Hi, I’m an aspiring Manual QA Tester focused on black-box testing.
 
