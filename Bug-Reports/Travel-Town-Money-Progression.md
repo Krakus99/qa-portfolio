@@ -1,49 +1,48 @@
-### 1. Bug Report ID
+## Bug Details
 
-BR-003
+| **Bug Title** | Money progression on Daily Missions goes up when player sell an item and undo selling. |
+| --- | --- |
+| **Date Found** | 9 April 2025 |
+| **Game Version** | Travel Town 2.12.1511 | 81812 (iOS / Android) |
+| **Tester** | Emre Sedef  |
 
-### 2. Bug Title
+## Description
 
-Money progression on Daily Missions goes up when player sell an item and undo selling.
+When a player sells an item from their inventory and then immediately undoes the selling action, the money progression on Daily Missions incorrectly increases. This behavior allows players to artificially inflate their money progression by repeatedly selling and undoing items. The Daily Missions system should only register actual earned money, and reversing a sale should not impact mission progress.
 
-### 3. Tested Game / Version
+## Steps to Reproduce
 
-Travel Town 2.12.1511 | 81812 (iOS / Android)
+1. Open the game and navigate to Daily Missions.
+2. Check the current money progression value.
+3. Sell any item from the inventory.
+4. Immediately undo the selling action.
+5. Observe the money progression in Daily Missions.
 
-### 4. Test Date
+## Expected Result
 
-9 April 2025
+Money progression should remain the same; selling and undoing an item should not affect Daily Missions progress.
 
-### 5. Tester
+## Actual Result
 
-Emre Sedef
+- Money progression value increases after undoing the selling of an item.
 
-### 6. Preconditions
+## Frequency
 
-- Player is in the game with Daily Missions active
-- At least one item available in inventory to sell
-- Daily Missions progress is visible
+Every time
 
-### 7. Steps to Reproduce
+## Evidence
 
-1. Open the game and navigate to **Daily Missions**
-2. Check the current money progression value
-3. Sell any item from the inventory
-4. Immediately undo the selling action
-5. Observe the money progression in Daily Missions
+https://drive.google.com/file/d/1UyonyqsTKh1f-nnCnCaPUvqGSmvusBfv/view?usp=drive_link
 
-### 8. Expected Result
+I did some tests on daily events, but I am sure that it works on daily missions too. 
 
-Money progression should remain unchanged. Selling and undoing an item should not affect Daily Missions progress.
+## Bug Type
 
-### 9. Actual Result
+- Progression / Economy Bug
 
-Money progression increases after undoing the sale of an item.
+## Severity
 
-### 10. Priority / Severity
+<aside>
+Medium
 
-Medium 
-
-### 11. Notes
-
-This issue may also affect Daily Events based on additional testing, suggesting a potential economy progression tracking bug.
+</aside>
