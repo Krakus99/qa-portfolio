@@ -43,4 +43,5 @@ To improve my QA skills and grow into a professional QA Engineer role.
 Contact
 
 www.linkedin.com/in/emre-sedef-b66a05289
+
 esedef.es@gmail.com
