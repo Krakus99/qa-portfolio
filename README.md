@@ -4,6 +4,7 @@ Manual QA Testing Portfolio (Bug Reports &amp; Test Cases) -->
 <p style="font-weight:bold; color:red;">
   QA Testing Portfolio
 </p>
+<p style="color:red;">Bu metin kırmızı</p>
 
 Hi, I’m an aspiring Manual QA Tester focused on black-box testing.
 
