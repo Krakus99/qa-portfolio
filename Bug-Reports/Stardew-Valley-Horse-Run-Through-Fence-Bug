@@ -1,43 +1,43 @@
-### 1. Bug Report ID
+## Bug Details
 
-BR-002
+| **Bug Title** | Horse clips through fences when ridden diagonally along their side. |
+| --- | --- |
+| **Date Found** | 27 June 2025 |
+| **Game Version** | Stardew Valley v1.6.15 -  (Steam, PC) |
+| **Tester** | Emre Sedef  |
 
-### 2. Bug Title
+## Description
 
-Horse Pass Through Fences Bug – Stardew Valley
+When the player rides the horse alongside a fence and attempts to move diagonally (pressing forward and left or right simultaneously), the horse is able to clip through the fence geometry and partially or fully pass inside it. This indicates a flaw in the collision detection or physics system related to diagonal movement vectors. While collision works correctly when moving strictly parallel or perpendicular to the fence, the diagonal input causes the horse’s collision bounds to bypass or fail to properly register the fence boundary. This bug may allow players to access unintended areas, potentially breaking immersion or enabling exploits. It is recommended to review and adjust the collision mesh or the movement controller’s handling of diagonal movement inputs to prevent clipping through environment obstacles.
 
-### 3. Tested Game / Version
-
-Stardew Valley, Version 1.6.15
-
-### 4. Test Date
-
-June 27, 2025
-
-### 5. Tester
-
-Emre Sedef
-
-### 6. Preconditions
-
-- The horse must be mounted by the player.
-- The player must be near a fence with collision enabled.
-
-### 7. Steps to Reproduce
+## Steps to Reproduce
 
 1. Mount the horse.
-2. Approach a fence and ride alongside it vertically.
-3. While riding next to the fence, press forward and left (or right) keys simultaneously to move diagonally toward the fence.
+2. Approach a fence and ride alongside it in a straight vertical direction.
+3. While riding next to the fence, press and hold forward + left (or right) keys to move diagonally toward the fence.
 4. Observe that the horse clips through or passes inside the fence.
 
-### 8. Expected Result
+## Expected Result
 
 The horse should **not pass through or clip into the fence** when moving diagonally. Collision detection must prevent the horse from entering the fence boundary at all times.
 
-9. Actual Result
+## Actual Result
 
-When moving diagonally next to the fence, the horse **clips through and partially passes inside the fence**, allowing access to restricted areas.
+- When moving diagonally next to the fence, the horse **clips through and partially passes inside the fence**, allowing access to restricted areas.
 
-10. Priority / Severity
+## Evidence
 
+
+
+## Bug Type
+
+- **Collision Bug**
+- **Physics Bug**
+- **Gameplay Bug**
+
+## Severity
+
+<aside>
 Medium
+
+</aside>
