@@ -1,48 +1,50 @@
-### 1. Bug Report ID
+## Bug Details
 
-BR-001
+| **Bug Title** | Bodyguard NPC disappears for player who hasn't completed Qi's quest in multiplayer, causing softlock at Casino entrance |
+| --- | --- |
+| **Date Found** | 16 June 2025 |
+| **Game Version** | Stardew Valley v1.6.15 - Multiplayer (Steam, PC) |
+| **Tester** | Emre Sedef (Player 2) |
 
-### 2. Bug Title
+## Description
 
-Multiplayer Qi’s 2nd Quest Synchronization Bug – Stardew Valley
+In a multiplayer session, when Player 1 completes Qi's continuation quest and Player 2 does not, the bodyguard outside the Casino in the desert disappears for both players. However, Player 2 - who did not complete the quest - is still unable to enter the Casino and is forcefully teleported back to the entrance as if the bodyguard is still blocking entry. This causes visual inconsistency and prevents progress for Player 2.
 
-### 3. Tested Game / Version
+## Steps to Reproduce
 
-Stardew Valley, Version 1.6.15
+1. Start a multiplayer session with two players (Player A and Player B)
+2. Ensure both players have not yet completed Qi's continuation quest
+3. Let only Player A complete the quest
+4. Travel to the desert with Player B
+5. Observe the Casino entrance
 
-### 4. Test Date
+## Expected Result
 
-June 16, 2025
+The bodyguard should remain visible to Player B until they complete the quest themselves. If the bodyguard is gone, Player B should be allowed inside the Casino.
 
-### 5. Tester
+## Actual Result
 
-Emre Sedef
+- The bodyguard disappears for Player B (visually)
+- Player B cannot enter the Casino and gets teleported back to the entrance
+- No message or feedback is shown explaining the restriction
 
-### 6. Preconditions
+## Evidence
 
-- Multiplayer mode active with at least 2 players
-- Player A completed Qi quest continuation, Player B did not
+<img width="1920" height="1080" alt="casino_entrance" src="https://github.com/user-attachments/assets/999b4a4b-8782-4643-a289-0c978ae4d18d" />
 
-### 7. Steps to Reproduce
+https://github.com/user-attachments/assets/c682634c-8d13-4035-a195-1398bd2c81f1
 
-1. Player A completes the Qi quest continuation.
-2. Player B does not complete the quest.
-3. Both players go to the casino in the desert area.
-4. Player B checks the visibility of the bodyguard NPC at the casino entrance.
-5. Player B attempts to enter the casino.
 
-### 8. Expected Result
 
-Bodyguard NPC should be visible to both players, and Player B should be able to enter the casino without issues.
+## Bug Type
 
-### 9. Actual Result
+- Visual Bug
+- Logic Bug
+- Sync / Multiplayer State Inconsistency
 
-Bodyguard NPC does not appear, and Player B is teleported back at the entrance.
+## Severity
 
-### 10. Priority / Severity
+<aside>
+Medium - Blocks access to content in multiplayer; inconsistent behavior
 
-Medium 
-
-### 11. Notes
-
-This indicates a multiplayer synchronization bug.
+</aside>
