@@ -1,13 +1,15 @@
 <!--# qa-portfolio
 Manual QA Testing Portfolio (Bug Reports &amp; Test Cases) -->
 
-QA Testing Portfolio
+<p style="font-weight:bold; color:red;">
+  QA Testing Portfolio
+</p>
 
 Hi, I’m an aspiring Manual QA Tester focused on black-box testing.
 
 This repository is created to demonstrate my QA skills through practical examples such as bug reports and test cases.
 
-About Me
+About Me 
 
 I am currently learning and practicing manual software testing.
 My focus is on:
