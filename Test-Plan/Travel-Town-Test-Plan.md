@@ -1,52 +1,68 @@
-**Test Plan
-1. Objective
+Test Plan
+Title
 
-Verify that selling an item and undoing the action does not incorrectly affect Daily Missions gold progression and that the system properly handles rollback of economy-related actions.
+Validate Daily Missions gold progression consistency during Sell & Undo item actions
 
-2. Scope
-Daily Missions gold progression system
-Inventory item creation, selling, and undo functionality
-Economy tracking and rollback logic
-UI and backend consistency of gold values
-3. Test Approach
-Functional testing of sell and undo mechanics
-State validation before and after each action
-Regression testing on progression system
-Repeated action testing to detect exploit behavior
-Comparison of UI vs backend progression values
-4. Test Scenarios
-Basic Flow
-Record gold progression → sell item → undo → verify full rollback
-Consistency Checks
-Verify item state returns correctly after undo
-Verify gold progression matches pre-action state
-Exploit Testing
-Repeat sell/undo cycles multiple times
-Check for artificial progression increase
-Edge Cases
-Sell multiple items and undo last action
-Perform actions rapidly (stress input testing)
-5. Preconditions
-Player has access to inventory
-Daily Missions system is active and visible
-At least one item is available for creation/selling
-6. Expected Result
-Selling increases gold progression correctly
-Undo action fully reverts:
-Item state
-Gold progression
-No unintended accumulation of progression should occur
-7. Pass / Fail Criteria
-Pass: Gold progression correctly reverts after undo
-Fail: Any mismatch between item state and progression system
-8. Risk
-Economy exploitation via sell/undo loops
-Progression system desynchronization
-Potential reward inflation in Daily Missions
-9. Test Data
-Single item
-Multiple items
-Different item values (low / high gold value items)
-10. Tester / Date
-Tester: Emre Sedef
-Test Date: 9 April 2025**
+Description
+
+This test plan verifies that selling an item and immediately undoing the action does not incorrectly affect the Daily Missions gold progression. The system must ensure proper state rollback in both frontend (UI) and backend (progression tracking).
+
+Repository Context
+Project: Travel Town (or related game repo)
+Module: Economy / Daily Missions / Inventory System
+Area: Sell & Undo mechanics
+Objective
+
+Ensure that item sell and undo actions correctly maintain synchronization between:
+
+Inventory state
+Gold progression tracking
+Daily Missions progression system
+Preconditions
+Player has access to inventory system
+Daily Missions system is active
+At least one item is available for creation and selling
+Game session is stable (no reconnect/state reset)
+Test Scenarios
+TC-01: Basic Sell & Undo Flow
+Record initial gold progression
+Sell an item
+Undo the sell action
+Verify gold progression matches initial state
+TC-02: State Consistency Check
+Validate item returns to inventory after undo
+Validate gold progression rollback is complete
+Compare UI value vs backend stored value (if accessible)
+TC-03: Repeated Exploit Attempt
+Repeat sell → undo cycle multiple times
+Check if progression accumulates incorrectly
+TC-04: Multi-item Handling
+Sell multiple items
+Undo last action
+Verify progression consistency
+TC-05: Stress Input Test
+Perform rapid sell/undo actions
+Check for desync or delayed rollback issues
+Expected Result
+Sell increases gold progression correctly
+Undo fully reverts:
+Inventory state
+Gold progression value
+No accumulation or duplication of progression values
+UI and backend remain synchronized
+Failure Criteria
+Gold progression increases after undo
+Item state restored but progression not reverted
+Mismatch between UI and backend values
+Exploitable progression gain via repeat actions
+Risk Assessment
+Economy system exploitation
+Progression inflation in Daily Missions
+Desync between client/server state
+Potential reward imbalance
+Notes
+This issue may indicate a missing rollback handler in economy transaction system
+Could be related to event-based progression tracking rather than state-based validation
+Tester
+
+Emre Sedef
