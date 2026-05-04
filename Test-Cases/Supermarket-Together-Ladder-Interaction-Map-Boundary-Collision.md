@@ -1,4 +1,4 @@
-# Test Scenario: TS-003
+# Test Scenario: TS-004
 
 ## Feature Tested
 Ladder Interaction / Map Boundary Collision  
