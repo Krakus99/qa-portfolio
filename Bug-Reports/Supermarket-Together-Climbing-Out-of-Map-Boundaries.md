@@ -11,7 +11,7 @@
 
 ## Description
 
-When a player places a ladder next to a street lamp located at the corner of the map, they can climb onto the lamp and use it to bypass map boundaries. By repositioning the ladder and adjusting their position, the player is able to move خارج the playable area.
+When a player places a ladder next to a street lamp located at the corner of the map, they can climb onto the lamp and use it to bypass map boundaries. By repositioning the ladder and adjusting their position, the player is able to move out of boundaries of the playable area.
 
 This issue breaks map boundary restrictions and allows unintended exploration of out-of-bounds areas. The system fails to properly enforce collision on environmental objects and map edges.
 
@@ -24,23 +24,22 @@ This issue breaks map boundary restrictions and allows unintended exploration of
 3. Place a ladder next to the street lamp  
 4. Climb the ladder  
 5. Move onto the top of the street lamp  
-6. Reposition the ladder if needed  
-7. Attempt to move beyond the map boundary  
+6. Take the ladder again when you are on the street lamp  
+7. Move the corner of the map
+8. Drop the ladder at the exact point while aiming the exact point
+9. Once you fly, move forward to go out of the map
 
 ---
 
 ## Expected Result
-
-- Player should not be able to stand on the street lamp  
+  
 - Collision detection should block climbing unintended objects  
 - Map boundaries should prevent any out-of-bounds movement  
 
 ---
 
 ## Actual Result
-
-- Player can climb onto the street lamp  
-- Player can use the ladder to gain positional advantage  
+ 
 - Player can exit the map boundaries  
 
 ---
@@ -53,7 +52,7 @@ Every time
 
 ## Evidence
 
-
+https://drive.google.com/file/d/1yvLF1afgKpd6dHPUojHWRCFt9fgTnETs/view?usp=sharing
 
 ---
 
