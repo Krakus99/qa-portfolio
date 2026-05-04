@@ -3,7 +3,7 @@
 ## Bug Details
 
 **Bug Title:** Player can exit map boundaries using ladder and street lamp  
-**Date Found:** June 27, 2025  
+**Date Found:** May 5, 2026  
 **Game Version:** Supermarket Together (Latest)  
 **Tester:** Emre Sedef  
 
